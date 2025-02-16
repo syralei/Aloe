@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+        }
+        .letter-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 600px;
+            position: relative;
+            border: 5px double #d6336c;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0px 0px 15px rgba(214, 51, 108, 0.5); }
+            to { box-shadow: 0px 0px 25px rgba(214, 51, 108, 0.8); }
+        }
+        h1 {
+            color: #d6336c;
+            font-family: 'Georgia', serif;
+        }
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .signature {
+            margin-top: 20px;
+            font-style: italic;
+            color: #888;
+        }
+        .heart {
+            color: red;
+            font-size: 30px;
+            position: absolute;
+            animation: float 2s infinite alternate, pulse 1.5s infinite;
+        }
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .image-container {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .heart-shaped {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #d6336c;
+            clip-path: path('M50 80 C10 30, 0 0, 25 0 C40 0, 50 15, 50 15 C50 15, 60 0, 75 0 C100 0, 90 30, 50 80 Z');
+            animation: bounce 2s infinite, fade-in 3s;
+        }
+        .hexagonal {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #d6336c;
+            clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+            animation: bounce 2s infinite, fade-in 3s;
+        }
+        .frame-image {
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #d6336c;
+            border-radius: 50%;
+            animation: fade-in 2s ease-in-out, rotate 5s infinite linear;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes rotate {
+            from { transform: translateX(-50%) rotate(0deg); }
+            to { transform: translateX(-50%) rotate(360deg); }
+        }
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+        }
+        .floating-hearts span {
+            position: absolute;
+            font-size: 25px;
+            animation: float 3s infinite alternate;
+        }
+        .floating-hearts span:nth-child(1) {
+            top: 10px;
+            left: 20px;
+            animation-duration: 2s;
+        }
+        .floating-hearts span:nth-child(2) {
+            top: 30px;
+            right: 20px;
+            animation-duration: 3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <span>❤️</span>
+        <span>💖</span>
+    </div>
+    <div class="letter-container">
+      
+        <span class="heart" style="top: -10px; left: 10px;">❤️</span>
+        <span class="heart" style="bottom: -10px; right: 10px;">❤️</span>
+        <h1>My Dearest,</h1>
+        <p>
+            From the moment I met you, my heart found its home. 
+            Every day with you is a blessing. 
+            Your smile brightens my darkest days, and your laughter is my favorite song.
+        </p>
+        <p>
+            I hope we can always understand each other and grow together
+        </p>
+        <p class="signature">With all my love,<br>Yours Forever</p>
+        <div class="image-container">
+            <img class="heart-shaped" src="C:\Users\hp\Pictures\Screenshots\393035_0.jpg">
+            <img class="hexagonal" src="C:\Users\hp\Pictures\Screenshots\393036_0.jpg">
+            <img class="heart-shaped" src="C:\Users\hp\Pictures\Screenshots\393037_0.jpg" >
+            <img class="hexagonal" src="C:\Users\hp\Pictures\Screenshots\393038_0.jpg" >
+            <img class="heart-shaped" src="C:\Users\hp\Pictures\Screenshots\393039_0.jpg" >
+            <img class="hexagonal" src="C:\Users\hp\Pictures\Screenshots\393040_0.jpg" >
+        </div>
+    </div>
+</body>
+</html>
